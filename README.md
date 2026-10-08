@@ -53,13 +53,13 @@ git push -u origin main
 
 ## 内容与交互
 
-- Hero 展示姓名、硕士身份、研究关键词与简介；以文字为主，低对比度 CSI 波形和网格仅作背景；提供 GitHub、Email、OP.GG 按钮，无照片、无真实实验数据。
-- About / Research / Projects / Education / News / Contact 六个正文 section。
+- Hero 展示姓名、千叶大学 M1 身份、小室研究室与具体研究简介；以文字为主，低对比度 CSI 波形和网格仅作背景；提供 GitHub、Email、OP.GG 按钮，无照片、无真实实验数据。
+- About Me + Quick Info / What I’m Working On / Research Interests / Projects / Education / News / Contact + Outside the Lab 七个正文 section。
 - `app.js` 的 `translations` 使用统一键名维护 zh、ja、en。HTML 中 `data-i18n` 与 `data-i18n-aria` 对应正文和辅助标签。
 - 优先读取保存的 `language`，否则从浏览器语言列表选择支持的语言，再回退 English。切换通过 textContent 更新，不插入 HTML。
 - 主题首次遵循系统；手动切换后存储 `theme`。未手动选择时跟随系统变化。存储不可用时仍可浏览和切换。主题通过 CSS 变量适配全部组件。
-- 960px 以下折叠导航；640px 以下主要内容改为单列。菜单支持 Escape、点击外部和导航后关闭。
-- 导航滚动高亮、平滑滚动、卡片 hover、timeline 与 section 渐入；支持 prefers-reduced-motion。
+- 1100px 以下折叠导航；760px 以下主要内容改为单列，研究小卡片保留双列。菜单支持 Escape、点击外部和导航后关闭。
+- 导航滚动高亮、平滑滚动、卡片 hover、timeline ；支持 prefers-reduced-motion。
 - Email 使用 mailto；GitHub / OP.GG 在新窗口打开并设有 noopener noreferrer。
 - 国服信息用原生 dialog 显示：德玛西亚 / 且凭风引絮飞花#29245。支持关闭按钮、Escape、点击背景和焦点恢复。
 - 无 JavaScript 时全部英文正文仍可阅读，语言及交互需要启用 JavaScript。
@@ -67,9 +67,9 @@ git push -u origin main
 ## 后续维护
 
 - 更新项目细节、真实代码仓库链接或截图；目前没有为研究平台猜测仓库地址。
-- 三张预留项目卡均为 Planned；开始研究后可改为 Ongoing，且需补齐三语字典。
+- 主项目为 Ongoing，仅保留一个 Planned 项目：Cross-Environment CSI Generalization；开始研究后再更新状态和三语字典。
 - 教育英文名称暂按提供内容使用，源代码已注释标记，后续可根据学校官方名称再次确认。
-- News 按提供的三条记录填写，可随进展增加。教育背景不显示年份。
+- News 按提供的两条真实事件填写，可随进展增加。教育背景不显示年份。
 - 可补充真实论文、学术主页链接或履历；目前没有虚构出版物、奖项、Scholar 或 ORCID。
 - Footer 年份自动使用访问者设备的当前年份。
 - SEO title、description 和基础 Open Graph 已配置。更改研究方向时同步修改 metadata；实际确定部署域名后可补充 canonical / og:url。
@@ -78,3 +78,7 @@ git push -u origin main
 
 在桌面与手机上分别检查三种语言、深浅主题、导航、Email、GitHub、OP.GG 与国服弹窗。外部服务的实时可达性、邮箱收件与 GitHub Pages 在线部署状态需要在实际发布后确认。
 
+
+## 当前视觉与内容
+
+以研究生的个人主页为定位。研究兴趣只保留 Wi-Fi CSI、人体状态估计、室内定位、泛化与鲁棒性；不设 Publications 或 CV 空栏目。蓝色用于主视觉、当前工作区域和教育主线；橘色用于按钮、项目侧栏、卡片顶线和节点。金色只用于章节短线、News 节点和卡片 hover 细边。深浅主题均使用独立 CSS 变量。学校和专业英文正式名称在源码中保留 TODO。
