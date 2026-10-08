@@ -53,7 +53,7 @@ git push -u origin main
 
 ## 内容与交互
 
-- Hero 展示姓名、硕士身份、研究关键词与简介；右侧是抽象无线波形，无照片、无真实实验数据。
+- Hero 展示姓名、硕士身份、研究关键词与简介；以文字为主，低对比度 CSI 波形和网格仅作背景；提供 GitHub、Email、OP.GG 按钮，无照片、无真实实验数据。
 - About / Research / Projects / Education / News / Contact 六个正文 section。
 - `app.js` 的 `translations` 使用统一键名维护 zh、ja、en。HTML 中 `data-i18n` 与 `data-i18n-aria` 对应正文和辅助标签。
 - 优先读取保存的 `language`，否则从浏览器语言列表选择支持的语言，再回退 English。切换通过 textContent 更新，不插入 HTML。
@@ -77,3 +77,4 @@ git push -u origin main
 ## 发布前复核
 
 在桌面与手机上分别检查三种语言、深浅主题、导航、Email、GitHub、OP.GG 与国服弹窗。外部服务的实时可达性、邮箱收件与 GitHub Pages 在线部署状态需要在实际发布后确认。
+
